@@ -1,3 +1,22 @@
+const burger = document.querySelector(".burger");
+const panel = document.querySelector(".panel");
+const burgerLinks = document.querySelectorAll(".b_link a");
+
+burger.addEventListener("click", e => {
+	burger.classList.toggle("_show");
+	panel.classList.toggle("_go");
+
+})
+
+burgerLinks.forEach(e => {
+	e.addEventListener("click", ev => {
+		panel.classList.remove("_go");
+		burger.classList.remove("_show");
+	})
+})
+
+
+
 const parseWeatherCode = (code) => {
 	switch (+code) {
 		case 0:
@@ -79,7 +98,6 @@ const parseWindSpead = (speed) => {
 }
 
 const parseWindDirection = (dir) => {
-	console.log(dir);
 
 	if (dir > 337.5 || dir <= 22.5) {
 		return 'North';
@@ -158,7 +176,7 @@ const addWeatherCard = async () => {
 			span.textContent = el;
 			p.innerText = text;
 			if (text.startsWith('Temperature')) {
-				span.style.color = +temperature[0] > 0 ? '#d90429' : '#4361ee';
+				span.style.color = +temperature[0] > 0 ? '#ff4d6d' : '#4361ee';
 			}
 			if (text.startsWith('Wind speed')) {
 				span.style.color = parseWindSpead(+windspeed[0]);
@@ -180,7 +198,7 @@ const addWeatherCard = async () => {
 		nodes.push(addP(temperature[0] + " " + temperature[1], 'Temperature: '));
 		nodes.push(addP(windspeed[0] + " " + windspeed[1], 'Wind speed: '));
 		nodes.push(addP(winddirection[0] + " " + winddirection[1], 'Wind direction: '));
-		nodes.push(addP(weathercode));
+		nodes.push(addP(weathercode, 'General: '));
 
 		cartN.append(...nodes)
 

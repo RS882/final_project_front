@@ -23,6 +23,7 @@
 
 body{
 background-color: #fefae0;
+color: #10451D;
 }
 .chakra-petch-regular {
 	font-family: "Chakra Petch", sans-serif;
@@ -37,7 +38,7 @@ background-color: #fefae0;
 
 	min-height: 100vh;
 	background-color: #B7EFC5;
-	color: #10451D;
+
 	max-width: 1200px;
  }
 
@@ -60,16 +61,18 @@ background-color: #fefae0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	
+	margin: 0 10px;
 
 
 }
-h1{
-	font-size: 40px;
+h1, .title{
+	font-size: 28px;
 	text-transform: uppercase;
 	font-weight: 700;
+	margin-top: 20px;
 }
 .header{
+	position: relative;
 	min-height: 90px;
 	position: sticky;
 	background-color: #4AD66D;
@@ -77,16 +80,25 @@ h1{
 	top: 0;
 	left: 0;
 	opacity: 0.8;
+	display: flex;
+	align-items: center;
+	gap: 20px;
 
+}
+.header_nav{
+	display: none;
+}
+.logo{
+	margin-left: 20px;
 }
 
 .weather_card{
-	border: 1px solid #000;
+	border: 1px solid #10451D;
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
 	margin-top: 20px;
-	width: 50%;
+	width: 100%;
 	padding: 10px;
 	font-size: 20px;
 	border-radius: 10px;
@@ -98,7 +110,7 @@ h1{
 
 .weather_card p {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	font-weight: 700;
 }
 .weather_card p span{
@@ -111,3 +123,50 @@ h1{
 	background-color: #155D27;
 	color:#fefae0 ;
 }
+
+@media only screen and (min-width: 767px) {
+	.weather_card{
+		width: 50%;
+		max-width: 500px;
+	}
+	h1, .title{
+		font-size: 40px;
+		
+	}
+	.header_nav{
+		display: flex;
+		gap: 20px;
+
+	}
+	.link_box{
+		border: 1px solid #10451D;
+		padding: 10px;
+		border-radius: 10px;
+	background: none;
+		transition: all 0.3s ease 0s;
+
+	}
+	.link_box:hover{
+		border: 1px solid #B7EFC5;
+		background: #11998e;  /* fallback for old browsers */
+		background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		
+	}
+
+	.link_box a{
+		text-decoration: none;
+		color: #10451D;
+		text-transform: uppercase;
+		font-size: 20px;
+		font-weight: 700;
+		transition: all 0.3s ease 0s;
+	}
+	.link_box:hover a{
+		color:#B7EFC5;
+	}
+
+
+	
+	
+ }
