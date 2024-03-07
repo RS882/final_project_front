@@ -1,0 +1,113 @@
+.loader {
+	width: 48px;
+	height: 48px;
+	border: 5px solid #FFF;
+	border-bottom-color: #FF3D00;
+	border-radius: 50%;
+	display: inline-block;
+	box-sizing: border-box;
+	animation: rotation 0.7s linear infinite;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+ }
+ @keyframes rotation {
+	0% {
+	  transform: rotate(0deg);
+	}
+ 
+	100% {
+	  transform: rotate(360deg);
+	}
+ }
+
+body{
+background-color: #fefae0;
+}
+.chakra-petch-regular {
+	font-family: "Chakra Petch", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+ }
+
+ .container{
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+
+	min-height: 100vh;
+	background-color: #B7EFC5;
+	color: #10451D;
+	max-width: 1200px;
+ }
+
+.flex_center{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.main{
+	flex:1;
+	padding: 0 10px;
+
+
+}
+
+
+.main_container{
+
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+
+
+}
+h1{
+	font-size: 40px;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+.header{
+	min-height: 90px;
+	position: sticky;
+	background-color: #4AD66D;
+	width: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0.8;
+
+}
+
+.weather_card{
+	border: 1px solid #000;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-top: 20px;
+	width: 50%;
+	padding: 10px;
+	font-size: 20px;
+	border-radius: 10px;
+	background: #11998e;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.weather_card p {
+	display: flex;
+	justify-content: space-evenly;
+	font-weight: 700;
+}
+.weather_card p span{
+	color: #B7EFC5;
+	font-style: italic;
+}
+
+.footer{
+	min-height: 60px;
+	background-color: #155D27;
+	color:#fefae0 ;
+}
